@@ -26,10 +26,7 @@ The site is fully responsive and uses modern design principles with minimal depe
 ├── index.html
 ├── styles.css
 ├── script.js
-├── /images
-│   ├── project1.png
-│   ├── project2.png
-│   └── ...
+├── images.png
 
 ## 🚀 How to Run Locally
 1. Clone the repository:
@@ -39,10 +36,7 @@ The site is fully responsive and uses modern design principles with minimal depe
 3. Launch index.html in your browser.
 
 ## 🌐 Live Demo
-https://pranayakhadgi.github.io/Personal-Portfolio
-
-## 📸 Preview
-(You can add a screenshot of your homepage here later)
+http://127.0.0.1:5500/index.html
 
 ## ✨ Future Plans
 - Add dark/light mode toggle
