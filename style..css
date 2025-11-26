@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Custom Cursor */
+html {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23dfffc7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 15.5v.01"></path><path d="M12 12v.01"></path><path d="M11 17v.01"></path><path d="M7 14v.01"></path></svg>') 12 12, auto;
+}
+
+/* Desktop Icons */
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    text-decoration: none;
+    color: #dfffc7;
+    pointer-events: auto;
+    transition: transform 0.2s;
+}
+
+.desktop-icon:hover {
+    transform: scale(1.05);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+}
+
+.icon-label {
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 0 0 4px rgba(0,0,0,0.8);
+}
+
+/* Taskbar */
+.taskbar-btn {
+    background: #532bdc;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dfffc7;
+    border: none;
+    transition: all 0.2s;
+    pointer-events: auto;
+}
+
+.taskbar-btn:hover {
+    background: #dfffc7;
+    color: #532bdc;
+}
+
+.taskbar-time {
+    color: #dfffc7;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Tamagotchi */
+.tamagotchi-window {
+    pointer-events: auto;
+    box-shadow: 0 0 20px rgba(223, 255, 199, 0.2);
+}
+
+.tamagotchi-btn {
+    background: #532bdc;
+    color: #dfffc7;
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.tamagotchi-btn:hover {
+    background: #dfffc7;
+    color: #532bdc;
+}
+
+/* Code Rain */
+#code-rain {
+    background: linear-gradient(to bottom, #17152d 0%, #532bdc 100%);
+    overflow: hidden;
+}
+
+/* Window Styles (will be enhanced by component) */
+.window {
+    position: absolute;
+    width: 600px;
+    min-height: 400px;
+    background: rgba(23, 21, 45, 0.9);
+    border: 2px solid #dfffc7;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(83, 43, 220, 0.5);
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+.window-header {
+    background: #532bdc;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    color: #dfffc7;
+    font-weight: bold;
+    cursor: move;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.window-content {
+    padding: 16px;
+    height: calc(100% - 32px);
+    overflow-y: auto;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #17152d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #532bdc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dfffc7;
+}

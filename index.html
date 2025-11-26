@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y2K.exe - Digital Playground Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            100: '#dfffc7',
+                            500: '#532bdc',
+                            900: '#17152d',
+                        },
+                        secondary: {
+                            500: '#dfffc7',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tightest: '-0.04em',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-900 h-full overflow-hidden font-inter tracking-tightest">
+    <!-- Desktop Wallpaper -->
+    <div id="desktop-wallpaper" class="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url('public/wallpaper3.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <!-- Code Rain Background -->
+    <div id="code-rain" class="fixed inset-0 z-1 opacity-10"></div>
+    
+    <!-- Desktop Icons -->
+    <div class="absolute left-0 top-0 p-4 z-10">
+        <div class="flex flex-col space-y-4">
+            <a href="#projects" class="desktop-icon group">
+                <div class="icon-box">
+                    <img src="public/projects.ico" alt="Projects" class="desktop-icon-img">
+                </div>
+                <span class="icon-label">Projects.exe</span>
+            </a>
+            <a href="#skills" class="desktop-icon group">
+                <div class="icon-box">
+                    <img src="public/skills.ico" alt="Skills" class="desktop-icon-img">
+                </div>
+                <span class="icon-label">Skills.dll</span>
+            </a>
+            <a href="#resume" class="desktop-icon group">
+                <div class="icon-box">
+                    <img src="public/resume.ico" alt="Resume" class="desktop-icon-img">
+                </div>
+                <span class="icon-label">Resume.pdf</span>
+            </a>
+            <a href="#contact" class="desktop-icon group">
+                <div class="icon-box">
+                    <img src="public/contact.ico" alt="Contact" class="desktop-icon-img">
+                </div>
+                <span class="icon-label">Contact.bat</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Windows 7 Taskbar -->
+    <div id="taskbar" class="windows7-taskbar">
+        <!-- Start Button -->
+        <button id="start-button" class="start-button">
+            <img src="public/start-orb.png" alt="Start" class="start-orb">
+        </button>
+        
+        <!-- Taskbar Items (Open Windows) -->
+        <div id="taskbar-items" class="taskbar-items">
+            <!-- Open windows will appear here -->
+        </div>
+        
+        <!-- System Tray -->
+        <div class="system-tray">
+            <div class="taskbar-time">
+                <span id="current-time">00:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div id="start-menu" class="start-menu hidden">
+        <div class="start-menu-left">
+            <div class="start-menu-programs">
+                <div class="start-menu-section">
+                    <div class="start-menu-item" data-action="projects">
+                        <img src="public/projects.ico" alt="Projects" class="start-menu-icon">
+                        <span>Projects.exe</span>
+                    </div>
+                    <div class="start-menu-item" data-action="skills">
+                        <img src="public/skills.ico" alt="Skills" class="start-menu-icon">
+                        <span>Skills.dll</span>
+                    </div>
+                    <div class="start-menu-item" data-action="resume">
+                        <img src="public/resume.ico" alt="Resume" class="start-menu-icon">
+                        <span>Resume.pdf</span>
+                    </div>
+                    <div class="start-menu-item" data-action="contact">
+                        <img src="public/contact.ico" alt="Contact" class="start-menu-icon">
+                        <span>Contact.bat</span>
+                    </div>
+                </div>
+            </div>
+            <div class="start-menu-search">
+                <input type="text" placeholder="Search programs and files" class="start-search-input">
+            </div>
+        </div>
+        <div class="start-menu-right">
+            <div class="start-menu-user-section">
+                <div class="start-menu-user">Pranaya Khadgi Shahi</div>
+            </div>
+            <div class="start-menu-shutdown">
+                <div class="shutdown-button">
+                    <i data-feather="power"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Windows Container -->
+    <div id="windows-container" class="relative z-20 h-full w-full pointer-events-none">
+        <!-- Windows will be appended here by JavaScript -->
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="components/window.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        // Initialize time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = 
+                `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
